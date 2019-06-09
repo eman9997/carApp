@@ -1,0 +1,32 @@
+{
+  "name": "carapp",
+  "version": "1.0.0",
+  "description": "It lets a user display his/her dream cars",
+  "main": "myapp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eman9997/carApp.git"
+  },
+  "keywords": [
+    "favorite",
+    "cars",
+    "classic",
+    "cars"
+  ],
+  "author": "Emanuel Fonseca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eman9997/carApp/issues"
+  },
+  "homepage": "https://github.com/eman9997/carApp#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.5.14"
+  }
+}
