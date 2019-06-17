@@ -1,6 +1,19 @@
-<h1>Hello welcome to the home page</h1>
+<% include ./partials/header %>
 
-<% cars.forEach((car)=>{   %>
-    <h1> <%=car.model %> </h1>
-<% }) %>
+<div class="container">
+    <h1 class="mb-5">Hello welcome to the home page</h1>
+    <% cars.forEach((car)=>{   %>
+        <h1> <%=car.make %> <%=car.model %> </h1>
+        <img src="<%=car.image %>" width="30%" class="mb-5"><a href="/cars/<%= car.id %>">CLICK HERE FOR DETAILS?</a>
+        <h1> <%=car.description.substring(0,100) %> </h1>
+        
+    <% }) %>
+    <p>
+    <a href="/cars/new" class="display-4">ADD A CAR?</a>
+    </p>
+</div>
+
+
+
+<% include ./partials/footer %>
 
