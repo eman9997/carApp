@@ -1,8 +1,20 @@
 
+<% include ./partials/header %>
 
-<h1>hELLO WORLD</h1>
+<div class="container">
+    <h1>hELLO WORLD</h1>
+    <h1> <%=car.make %> <%=car.model %> </h1>
+    <img src="<%=car.image %>" width="30%" class="mb-5">
+    <a href="/">Go Back home</a>
+    <h1> <%=car.description %> </h1>
+</div>
 
-<h1> <%=car.make %> <%=car.model %> </h1>
-<img src="<%=car.image %>" width="30%" class="mb-5">
-<a href="/">Go Back home</a>
-<h1> <%=car.description %> </h1>
+<a href="/cars/<%= car.id %>/edit" class="display-4">Edit this Car?</a>
+
+<form action="/cars/<%= car.id %>?_method=DELETE" method="POST">
+
+<button>submit</button>
+
+</form>
+
+<% include ./partials/footer %>

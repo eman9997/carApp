@@ -1,0 +1,17 @@
+
+<h1>
+    Hello welcome to the edit page
+</h1>
+
+<form action="/cars/<%= car.id %>?_method=PUT" method="POST">
+    <input type="text" name="car[make]" value=
+    "<%= car.model %>">
+    <input type="text" name="car[model]" value="
+    <%= car.model %>">
+    <input type="text" name="car[image]" value=
+    "<%= car.image %>">
+    <textarea name="car[description]" cols="30" rows="10">
+        <%= car.description %>
+    </textarea>
+    <input type="submit">
+</form>

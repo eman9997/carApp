@@ -4,12 +4,17 @@ let methodOverride=require('method-override');
 let bodyParser=require("body-parser");
 let app= express();
 
+mongoose.connect("mongodb://localhost/car_app",{useNewUrlParser: true,
 
-mongoose.connect("mongodb://localhost/car_app",{useNewUrlParser: true } );
+
+} );
+
 
 app.set('view engine', 'ejs');
-app.use(bodyParser.urlencoded({extened: true}));
+mongoose.set('useFindAndModify', false);
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static("public"));
+app.use(methodOverride("_method"));
 
 let carSchema = new mongoose.Schema({
     make: String,
@@ -73,8 +78,35 @@ app.get('/cars/:id',(req,res)=>{
             res.render("show",{car:foundCar});
         }
     });
+});
 
-    
+app.get('/cars/:id/edit',(req,res)=>{
+    Car.findById(req.params.id,(err,editCar)=>{
+        if(err){
+            console.log(err);
+        } else{
+            res.render("edit",{car:editCar});
+        }
+    });
+});
+
+app.put('/cars/:id',(req,res)=>{
+Car.findByIdAndUpdate(req.params.id,req.body.car,(err, updatedCar)=>{
+    if(err){
+        res.redirect("/cars");
+    }else{
+        res.redirect("/cars/"+req.params.id);
+    }
+    })
+});
+app.delete('/cars/:id',(req,res)=>{
+    Car.findByIdAndRemove(req.params.id, (err)=>{
+        if (err) {
+            res.redirect('/cars');
+        } else {
+            res.redirect('/cars');
+        }
+    })
 });
 
 
