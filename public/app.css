@@ -1,3 +1,9 @@
 body{
     font-family: 'Times New Roman', Times, serif;
 }
+
+.border {
+    border: 5px solid #027cf7!important;
+}
+
+
