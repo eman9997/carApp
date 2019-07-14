@@ -1,22 +1,36 @@
 <% include ./partials/header %>
 
-<div class="container mt-5 border border-primary rounded-lg">
-    <h1 class="mb-5 text-center font-weight-bold">Your Car Catalog</h1>
-    <div class="row">
+<!-- <div class="container my-5 border border-primary rounded-lg">
+    <h1 class="mb-5 text-center font-weight-bold mt-3 display-3 jumbotron">Your Car Catalog</h1>
+    <div class="card-group ">
         <% cars.forEach((car)=>{   %>
-            <div class="col-6">
-                <h1 class="text-uppercase font-weight-bold"> <%=car.make %> <%=car.model %> </h1>
-                <img src="<%=car.image %>" img-fluid" width="30%" class="mb-5"><a href="/cars/<%= car.id %>">CLICK HERE FOR DETAILS?</a>
-                <h1> <%=car.description.substring(0,100) %> </h1>
-            </div>
+        <div class="card">
+                <h1 class="text-uppercase font-weight-bold card-title"> <%=car.make %> <%=car.model %> </h1>
+
+                <img src="<%=car.image %>" width="30%" class="mb-5 card-img-top img-fluid">
+                
+                <a href="/cars/<%= car.id %>" class="btn btn-info btn-sm">CLICK HERE FOR DETAILS?</a>
+
+                <div class="card-body"> <%=car.description.substring(0,100) %> </div>
+         </div>
         <% }) %>
     </div>
     <p>
-    <a href="/cars/new" class="display-3">ADD A CAR?</a>
+    <a href="/cars/new" class="btn btn-primary text-dark font-weight-bolder btn-block btn-outline-info my-5 mybutton">ADD A CAR?</a>
     </p>
-</div>
+</div> -->
 
-
+<div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-img-top">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+    </div>
 
 <% include ./partials/footer %>
 
