@@ -12,7 +12,19 @@ body{
     margin: 0 auto;
     border-radius: 30px;
 }
-.custom{
-   
+.just{
+    width: 80%;
+    text-align: center;
 }
+.mybutton{
+    width: 30%;
+    font-size: 1.2em;
+    padding-left: 3%;
+}
+.mysize{
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
 

@@ -1,20 +1,22 @@
 
 <% include ./partials/header %>
 
-<div class="container">
-    <h1>hELLO WORLD</h1>
-    <h1> <%=car.make %> <%=car.model %> </h1>
+<div class="just mx-auto jumbotron">  
+    <p class="text-uppercase display-4"> <%=car.make %> <%=car.model %> </p>
+
     <img src="<%=car.image %>" width="30%" class="mb-5">
     <a href="/">Go Back home</a>
     <h1> <%=car.description %> </h1>
+
+    <div class="btngroup">
+        
+        <a href="/cars/<%= car.id %>/edit" class="display-4 btn btn-info mybutton">Edit this Car?</a>
+
+        <form action="/cars/<%= car.id %>?_method=DELETE" method="POST" class="mysize">
+            <button class="btn btn-danger mybutton ">DELETE
+            </button>
+        </form>
+    </div>
 </div>
-
-<a href="/cars/<%= car.id %>/edit" class="display-4">Edit this Car?</a>
-
-<form action="/cars/<%= car.id %>?_method=DELETE" method="POST">
-
-<button>DELETE</button>
-
-</form>
 
 <% include ./partials/footer %>

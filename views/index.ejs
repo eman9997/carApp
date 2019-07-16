@@ -1,9 +1,11 @@
 <% include ./partials/header %>
 
-<!-- <div class="container my-5 border border-primary rounded-lg">
+<div class="container my-5 border border-primary rounded-lg">
     <h1 class="mb-5 text-center font-weight-bold mt-3 display-3 jumbotron">Your Car Catalog</h1>
-    <div class="card-group ">
+    <div class="card-group row">
         <% cars.forEach((car)=>{   %>
+       
+        <div class="col-md-6">
         <div class="card">
                 <h1 class="text-uppercase font-weight-bold card-title"> <%=car.make %> <%=car.model %> </h1>
 
@@ -12,25 +14,17 @@
                 <a href="/cars/<%= car.id %>" class="btn btn-info btn-sm">CLICK HERE FOR DETAILS?</a>
 
                 <div class="card-body"> <%=car.description.substring(0,100) %> </div>
-         </div>
+        
+        </div>
+        </div>
         <% }) %>
     </div>
     <p>
     <a href="/cars/new" class="btn btn-primary text-dark font-weight-bolder btn-block btn-outline-info my-5 mybutton">ADD A CAR?</a>
     </p>
-</div> -->
+</div>
 
-<div class="row">
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-img-top">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-    </div>
+
 
 <% include ./partials/footer %>
 
