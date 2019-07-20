@@ -3,6 +3,11 @@ let mongoose =require("mongoose");
 let methodOverride=require('method-override');
 let bodyParser=require("body-parser");
 let app= express();
+let Car= require("./models/car");
+let seedDB= require("./seed");
+
+seedDB();
+
 
 mongoose.connect("mongodb://localhost/car_app",{useNewUrlParser: true,
 
@@ -16,13 +21,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static("public"));
 app.use(methodOverride("_method"));
 
-let carSchema = new mongoose.Schema({
-    make: String,
-    model: String,
-    description: String,
-    image: String
-});
-let Car =mongoose.model("Car", carSchema);
 
 
 
