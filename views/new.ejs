@@ -1,46 +1,43 @@
 
 <% include ./partials/header %>
 
-
 <div class="jumbotron">
 
+  <h1 class="text-center mb-5 font-weight-bolder text-uppercase">
 
-<h1 class="text-center mb-5 font-weight-bolder text-uppercase">
-
-  <a href="/" class="myicon">
-        
-    <i class="fas fa-arrow-circle-left"></i>
-  </a>
+    <a href="/" class="myicon">  
+      <i class="fas fa-arrow-circle-left"></i>
+    </a>
 
 
-Add a new car to your collection
-</h1>
-</div>
-<div class="container border border-info p-5">
+  Add a new car to your collection
+  </h1>
+  </div>
+  <div class="container border border-info p-5">
 
-<form action="/cars" method="POST">
-    <div class="form-group">
-      <label for="make">make</label>
-      <input type="text" name="car[make]" id="make" placeholder="Make" class="form-control">
-    </div>
+  <form action="/cars" method="POST">
+      <div class="form-group">
+        <label for="make">make</label>
+        <input type="text" name="car[make]" id="make" placeholder="Make" class="form-control">
+      </div>
 
-    <div class="form-group">
-      <label for="model">model</label>
-      <input type="text" name="car[model]" id="model" placeholder="Model" class="form-control">
-    </div>
+      <div class="form-group">
+        <label for="model">model</label>
+        <input type="text" name="car[model]" id="model" placeholder="Model" class="form-control">
+      </div>
 
-    <div class="form-group">
-            <label for="image">image</label>
-            <input type="text" name="car[image]" id="image" placeholder="image Link" class="form-control">
-     </div>
-     <div class="form-group">
-            <label for="description">description</label>
-            <textarea class="form-control" name="car[description]" id="description" rows="3"></textarea>
-    </div>
+      <div class="form-group">
+              <label for="image">image</label>
+              <input type="text" name="car[image]" id="image" placeholder="image Link" class="form-control">
+      </div>
+      <div class="form-group">
+              <label for="description">description</label>
+              <textarea class="form-control" name="car[description]" id="description" rows="3"></textarea>
+      </div>
 
-   
-    <button type="submit" class="mycustButton font-weight-bolder btn btn-primary btn-block">Submit</button>
-  </form>
+    
+      <button type="submit" class="mycustButton font-weight-bolder btn btn-primary btn-block">Submit</button>
+    </form>
 
 </div>
 

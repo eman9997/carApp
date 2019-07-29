@@ -1,9 +1,5 @@
+<!-- 
 
-<h1>
-    Hello welcome to the edit page
-</h1>
-
-<form action="/cars/<%= car.id %>?_method=PUT" method="POST">
     <input type="text" name="car[make]" value=
     "<%= car.model %>">
     <input type="text" name="car[model]" value="
@@ -13,5 +9,75 @@
     <textarea name="car[description]" cols="30" rows="10">
         <%= car.description %>
     </textarea>
-    <input type="submit">
-</form>
+    <input type="submit"> -->
+
+
+
+
+
+
+<% include ./partials/header %>
+
+<div class="jumbotron">
+
+  <h1 class="text-center mb-5 font-weight-bolder text-uppercase">
+
+    <a href="/" class="myicon">  
+      <i class="fas fa-arrow-circle-left"></i>
+    </a>
+
+
+    Hello welcome to the edit page
+  </h1>
+  </div>
+  <div class="container border border-info p-5">
+
+    <form action="/cars/<%= car.id %>?_method=PUT" method="POST">
+      <div class="form-group">
+        <label for="make">make</label>
+        <input type="text" name="car[make]" value=
+        "<%= car.make %>" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="model">model</label>
+        <input type="text" name="car[model]" id="model"  class="form-control" value="<%=car.model %>">
+      </div>
+
+      <div class="form-group">
+              <label for="image">image</label>
+              <input type="text" name="car[image]" id="image" class="form-control" value=
+              "<%= car.image %>">
+      </div>
+      <div class="form-group">
+              <label for="description">description</label>
+              <textarea class="form-control" name="car[description]" id="description" rows="3"><%= car.description %>
+              </textarea>
+      </div>
+
+    
+      <button type="submit" class="mycustButton font-weight-bolder btn btn-primary btn-block">Submit</button>
+    </form>
+
+</div>
+
+
+<% include ./partials/footer %>
+
+<!-- 
+<h1>
+        Hello welcome to the edit page
+    </h1>
+    
+    <form action="/cars/<%= car.id %>?_method=PUT" method="POST">
+        <input type="text" name="car[make]" value=
+        "<%= car.model %>">
+        <input type="text" name="car[model]" value="
+        <%= car.model %>">
+        <input type="text" name="car[image]" value=
+        "<%= car.image %>">
+        <textarea name="car[description]" cols="30" rows="10">
+            <%= car.description %>
+        </textarea>
+        <input type="submit">
+    </form> -->

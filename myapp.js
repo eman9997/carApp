@@ -6,7 +6,7 @@ let app= express();
 let Car= require("./models/car");
 let seedDB= require("./seed");
 
-seedDB();
+// seedDB();
 
 
 mongoose.connect("mongodb://localhost/car_app",{useNewUrlParser: true,
