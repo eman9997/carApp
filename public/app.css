@@ -29,6 +29,11 @@ body{
 .mycustButton{
    font-size: 2em;
 }
+.myicon{
+    width: 50px;
+    height: 100px;
+    font-size: 5rem;
+}
 
 
 
